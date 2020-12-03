@@ -1,1 +1,1 @@
-Simple ant colorful period tale with detailed information of eack element in periodic table.
+Simple ant colorful period table with detailed information of eack element in periodic table.
