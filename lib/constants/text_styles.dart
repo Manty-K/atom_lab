@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 TextStyle kSymbolStyle = TextStyle(color: Colors.white, fontSize: 100);
 
-TextStyle kAtomicNumberStyle = TextStyle(color: Colors.white, fontSize: 30);
+TextStyle kAtomicNumberStyle = TextStyle(color: Colors.white, fontSize: 20);
 
 TextStyle kNameStyle(Color elementColor) {
   return TextStyle(
@@ -12,6 +12,6 @@ TextStyle kNameStyle(Color elementColor) {
 
 TextStyle kPropertyStyle = TextStyle(
     color: Colors.white,
-    fontSize: 20,
+    fontSize: 15,
     fontWeight: FontWeight.w300,
     letterSpacing: 1);
