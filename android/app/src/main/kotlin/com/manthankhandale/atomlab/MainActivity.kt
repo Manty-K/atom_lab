@@ -1,4 +1,4 @@
-package com.example.atom_lab
+package com.manthankhandale.atomlab
 
 import io.flutter.embedding.android.FlutterActivity
 
