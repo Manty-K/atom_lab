@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Atom Lab',
       theme: ThemeData(
         scaffoldBackgroundColor: kBlack,
         visualDensity: VisualDensity.adaptivePlatformDensity,
