@@ -7,7 +7,7 @@ import 'components/atom_animation.dart';
 
 class ElementInfo extends StatelessWidget {
   final int index;
-  Color elementColor;
+  Color elementColor = kNonMetal;
   ElementInfo(this.index) {
     switch (groupBlock(index)) {
       case "Nonmetal":

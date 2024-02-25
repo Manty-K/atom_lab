@@ -6,8 +6,8 @@ import 'package:atom_lab/constants/app_colors.dart';
 
 class ElementTile extends StatelessWidget {
   final int index;
-  Color elementColor;
-  int actualIndex;
+  Color elementColor = kNonMetal;
+  int actualIndex = 0;
 
   ElementTile(this.index) {
     if (index != 0) {
@@ -90,9 +90,9 @@ class ElementTile extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               Text(index != 0 ? name(index - 1) : '',
-                  style: TextStyle(fontSize: 15, color: Colors.white)),
+                  style: TextStyle(fontSize: 12, color: Colors.white)),
               Text(index != 0 ? atomicMass(index - 1) : '',
-                  style: TextStyle(fontSize: 15, color: Colors.white)),
+                  style: TextStyle(fontSize: 8, color: Colors.white)),
             ],
           ),
         ),

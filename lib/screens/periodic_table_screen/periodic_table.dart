@@ -4,7 +4,7 @@ import 'package:atom_lab/screens/periodic_table_screen/components/element_tile.d
 import 'package:atom_lab/screens/periodic_table_screen/components/empty_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:diagonal_scrollview/diagonal_scrollview.dart';
+import 'package:single_child_two_dimensional_scroll_view/single_child_two_dimensional_scroll_view.dart';
 
 class PeriodicTable extends StatefulWidget {
   @override
@@ -22,7 +22,9 @@ class _MyAppState extends State<PeriodicTable> {
       ),
       home: new Scaffold(
         body: SafeArea(
-          child: DiagonalScrollView(child: buildPeriodicTable()),
+          child: SingleChildTwoDimensionalScrollView(
+            child: buildPeriodicTable(),
+          ),
         ),
       ),
     );

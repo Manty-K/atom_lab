@@ -7,7 +7,7 @@ TextStyle kAtomicNumberStyle = TextStyle(color: Colors.white, fontSize: 20);
 
 TextStyle kNameStyle(Color elementColor) {
   return TextStyle(
-      fontSize: 30, color: elementColor, fontWeight: FontWeight.w500);
+      fontSize: 20, color: elementColor, fontWeight: FontWeight.w500);
 }
 
 TextStyle kPropertyStyle = TextStyle(

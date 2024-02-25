@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
 class BigScreen extends StatelessWidget {
-  const BigScreen({Key key, this.name}) : super(key: key);
+  const BigScreen({Key? key, required this.name}) : super(key: key);
 
   final String name;
 

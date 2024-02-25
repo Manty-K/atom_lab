@@ -35,7 +35,7 @@ class foo {
   String eConfig = '';
 
   void fillS(int n) {
-    String myS;
+    String? myS;
     for (int i = 1; i <= 2; i++) {
       if (atomicNumber == 0) {
         break;
@@ -49,7 +49,7 @@ class foo {
   }
 
   void fillP(int n) {
-    String myP;
+    String? myP;
     for (int i = 1; i <= 6; i++) {
       if (atomicNumber == 0) {
         break;
@@ -63,7 +63,7 @@ class foo {
   }
 
   void fillD(int n) {
-    String myD;
+    String? myD;
     for (int i = 1; i <= 10; i++) {
       if (atomicNumber == 0) {
         break;
@@ -77,7 +77,7 @@ class foo {
   }
 
   void fillF(int n) {
-    String myF;
+    String? myF;
     for (int i = 1; i <= 10; i++) {
       if (atomicNumber == 0) {
         break;
