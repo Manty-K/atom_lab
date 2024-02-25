@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'AtomLab',
       theme: ThemeData(
         scaffoldBackgroundColor: kBlack,
+        brightness: Brightness.dark,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: PeriodicTable(),

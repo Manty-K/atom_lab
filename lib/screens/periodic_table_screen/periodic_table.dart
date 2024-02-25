@@ -1,10 +1,12 @@
 import 'package:atom_lab/constants/app_colors.dart';
+import 'package:atom_lab/constants/links.dart';
 import 'package:atom_lab/constants/sizes.dart';
 import 'package:atom_lab/screens/periodic_table_screen/components/element_tile.dart';
 import 'package:atom_lab/screens/periodic_table_screen/components/empty_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:single_child_two_dimensional_scroll_view/single_child_two_dimensional_scroll_view.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class PeriodicTable extends StatefulWidget {
   @override
@@ -12,15 +14,54 @@ class PeriodicTable extends StatefulWidget {
 }
 
 class _MyAppState extends State<PeriodicTable> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey(); // Create a key
+
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'AtomLab',
+      themeMode: ThemeMode.dark,
       theme: ThemeData(
         scaffoldBackgroundColor: kBlack,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: new Scaffold(
+        key: _key,
+        drawer: Drawer(
+          backgroundColor: kBlack,
+          child: Column(
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                ),
+                onPressed: () {
+                  launchUrlString(policyLink);
+                },
+                child: Text('Privacy Policy'),
+              )
+            ],
+          ),
+        ),
+        appBar: AppBar(
+          backgroundColor: kBlack,
+          leading: IconButton(
+            onPressed: () {
+              _key.currentState!.openDrawer();
+            },
+            icon: Icon(
+              Icons.menu_rounded,
+              color: Colors.white,
+            ),
+          ),
+          title: Text(
+            'AtomLab',
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
         body: SafeArea(
           child: SingleChildTwoDimensionalScrollView(
             child: buildPeriodicTable(),
